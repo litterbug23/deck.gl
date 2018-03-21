@@ -1,9 +1,10 @@
 const {resolve} = require('path');
 const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-const ALIASES = require('./aliases');
+const ALIASES = require('../aliases');
 
 const LIBRARY_BUNDLE_CONFIG = {
   // Bundle the source code
@@ -50,7 +51,7 @@ const LIBRARY_BUNDLE_CONFIG = {
     // leave minification to app
     // new webpack.optimize.UglifyJsPlugin({comments: false})
     new webpack.DefinePlugin({
-      DECK_VERSION: JSON.stringify(require('./package.json').version)
+      DECK_VERSION: JSON.stringify(require('../package.json').version)
     })
   ]
 };
@@ -95,7 +96,7 @@ const BROWSER_CONFIG = {
     fs: 'empty'
   },
 
-  plugins: []
+  plugins: [new HtmlWebpackPlugin({title: 'luma.gl tests'})]
 };
 
 const TEST_BROWSER_CONFIG = Object.assign({}, BROWSER_CONFIG, {
@@ -126,19 +127,19 @@ const BENCH_BROWSER_CONFIG = Object.assign({}, BROWSER_CONFIG, {
   }
 });
 
-const SIZE_ES6_CONFIG = Object.assign({}, TEST_CONFIG, {
+const SIZE_ES6_CONFIG = Object.assign({}, TEST_BROWSER_CONFIG, {
   resolve: {
     mainFields: ['esnext', 'browser', 'module', 'main'],
     alias: Object.assign({}, ALIASES, {
-      'luma.gl': resolve(__dirname, '../dist/es6')
+      'deck.gl': resolve(__dirname, '../dist/es6')
     })
   }
 });
 
-const SIZE_ESM_CONFIG = Object.assign({}, TEST_CONFIG, {
+const SIZE_ESM_CONFIG = Object.assign({}, TEST_BROWSER_CONFIG, {
   resolve: {
     alias: Object.assign({}, ALIASES, {
-      'luma.gl': resolve(__dirname, '../dist/esm')
+      'deck.gl': resolve(__dirname, '../dist/esm')
     })
   }
 });
