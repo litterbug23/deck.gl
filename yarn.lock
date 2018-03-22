@@ -6183,9 +6183,9 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-viewport-mercator-project@>=5.1.0-alpha.1:
-  version "5.1.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/viewport-mercator-project/-/viewport-mercator-project-5.1.0-alpha.1.tgz#c5a7b4e53b48fc5ba8f6949359605bd0f4f362bc"
+viewport-mercator-project@>=5.1.0-alpha.2:
+  version "5.1.0-alpha.2"
+  resolved "https://registry.yarnpkg.com/viewport-mercator-project/-/viewport-mercator-project-5.1.0-alpha.2.tgz#797eaed537553d8ced70ede5bf2522ceb01e7f10"
   dependencies:
     math.gl ">=1.1.0-alpha.1"
 

@@ -25,7 +25,6 @@
 import {Layer, COORDINATE_SYSTEM, experimental} from 'deck.gl';
 const {fp64LowPart, enable64bitSupport} = experimental;
 import {GL, Model, Geometry, loadTextures, Texture2D} from 'luma.gl';
-import assert from 'assert';
 
 import vs from './mesh-layer-vertex.glsl';
 import vs64 from './mesh-layer-vertex-64.glsl';
@@ -166,8 +165,8 @@ export default class MeshLayer extends Layer {
   }
 
   getModel(gl) {
-    const isValidMesh = this.props.mesh instanceof Geometry && this.props.mesh.attributes.positions;
-    assert(isValidMesh);
+    // const isValidMesh = this.props.mesh instanceof Geometry && this.props.mesh.attributes.positions;
+    // assert(isValidMesh);
 
     return new Model(
       gl,
