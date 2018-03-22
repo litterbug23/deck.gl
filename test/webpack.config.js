@@ -51,7 +51,8 @@ const LIBRARY_BUNDLE_CONFIG = {
     // leave minification to app
     // new webpack.optimize.UglifyJsPlugin({comments: false})
     new webpack.DefinePlugin({
-      DECK_VERSION: JSON.stringify(require('../package.json').version)
+      DECK_VERSION: JSON.stringify(require('../package.json').version),
+      NODE_ENV: 'production'
     })
   ]
 };
@@ -165,7 +166,13 @@ function getBundleSizeTestAppConfig(env) {
       path: resolve('./dist'),
       filename: '[name]-bundle.js'
     },
-    plugins: [new UglifyJsPlugin(), new BundleAnalyzerPlugin()]
+    plugins: [
+      // leave minification to app
+      // new webpack.optimize.UglifyJsPlugin({comments: false})
+      new webpack.DefinePlugin({NODE_ENV: JSON.stringify('production')}),
+      new UglifyJsPlugin(),
+      new BundleAnalyzerPlugin()
+    ]
   });
 }
 
