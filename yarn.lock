@@ -1349,8 +1349,8 @@ camelcase@^3.0.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-3.0.0.tgz#32fc4b9fcdaf845fcdf7e73bb97cac2261f0ab0a"
 
 caniuse-lite@^1.0.30000792:
-  version "1.0.30000817"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000817.tgz#e993c380eb4bfe76a2aed4223f841c02d6e0d832"
+  version "1.0.30000819"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000819.tgz#aabee5fd15a080febab6ae5d30c9ea15f4c6d4e2"
 
 caseless@~0.11.0:
   version "0.11.0"
@@ -3065,8 +3065,8 @@ html-minifier@^3.2.3:
     uglify-js "3.3.x"
 
 html-webpack-plugin@^3.0.7:
-  version "3.0.7"
-  resolved "https://registry.yarnpkg.com/html-webpack-plugin/-/html-webpack-plugin-3.0.7.tgz#b46074f6a76e791581ffe9bb059a72b452d99907"
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/html-webpack-plugin/-/html-webpack-plugin-3.1.0.tgz#6e02baaedb1e906310917f03239c793a75af2885"
   dependencies:
     html-minifier "^3.2.3"
     loader-utils "^0.2.16"
@@ -3423,8 +3423,8 @@ is-path-cwd@^1.0.0:
   resolved "https://registry.yarnpkg.com/is-path-cwd/-/is-path-cwd-1.0.0.tgz#d225ec23132e89edd38fda767472e62e65f1106d"
 
 is-path-in-cwd@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/is-path-in-cwd/-/is-path-in-cwd-1.0.0.tgz#6477582b8214d602346094567003be8a9eac04dc"
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/is-path-in-cwd/-/is-path-in-cwd-1.0.1.tgz#5ac48b345ef675339bd6c7a48a912110b241cf52"
   dependencies:
     is-path-inside "^1.0.0"
 
@@ -3812,9 +3812,9 @@ lru-cache@^4.0.1, lru-cache@^4.1.1:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
 
-luma.gl@>=5.2.0-alpha.4:
-  version "5.2.0-alpha.4"
-  resolved "https://registry.yarnpkg.com/luma.gl/-/luma.gl-5.2.0-alpha.4.tgz#0108dd362765cbc52dc7c74c53b207071f523846"
+luma.gl@>=5.2.0-alpha.6:
+  version "5.2.0-alpha.6"
+  resolved "https://registry.yarnpkg.com/luma.gl/-/luma.gl-5.2.0-alpha.6.tgz#c1615c42d28e5cc98b8da00f55c3b79ebd8ee5c5"
   dependencies:
     math.gl ">=1.1.0-alpha.1"
     probe.gl ">=1.0.0-alpha.10"
@@ -3935,8 +3935,8 @@ micromatch@^2.1.5, micromatch@^2.3.11:
     regex-cache "^0.4.2"
 
 micromatch@^3.1.4, micromatch@^3.1.8:
-  version "3.1.9"
-  resolved "https://registry.yarnpkg.com/micromatch/-/micromatch-3.1.9.tgz#15dc93175ae39e52e93087847096effc73efcf89"
+  version "3.1.10"
+  resolved "https://registry.yarnpkg.com/micromatch/-/micromatch-3.1.10.tgz#70859bc95c9840952f359a068a3fc49f9ecfac23"
   dependencies:
     arr-diff "^4.0.0"
     array-unique "^0.3.2"
@@ -3950,7 +3950,7 @@ micromatch@^3.1.4, micromatch@^3.1.8:
     object.pick "^1.3.0"
     regex-not "^1.0.0"
     snapdragon "^0.8.1"
-    to-regex "^3.0.1"
+    to-regex "^3.0.2"
 
 miller-rabin@^4.0.0:
   version "4.0.1"
@@ -5928,7 +5928,7 @@ to-regex-range@^2.1.0:
     is-number "^3.0.0"
     repeat-string "^1.6.1"
 
-to-regex@^3.0.1:
+to-regex@^3.0.1, to-regex@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/to-regex/-/to-regex-3.0.2.tgz#13cfdd9b336552f30b51f33a8ae1b42a7a7599ce"
   dependencies:
