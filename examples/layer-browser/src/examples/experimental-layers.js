@@ -4,7 +4,8 @@ import {
   PathMarkerLayer,
   SolidPolygonLayer,
   Arrow2DGeometry,
-  TextLayer
+  TextLayer,
+  AdvancedTextLayer
 } from 'deck.gl-layers';
 
 import {COORDINATE_SYSTEM} from 'deck.gl';
@@ -174,6 +175,25 @@ const TextLayerExample = {
   }
 };
 
+const AdvancedTextLayerExample = {
+  layer: AdvancedTextLayer,
+  getData: () => dataSamples.points.slice(0, 50),
+  props: {
+    id: 'text-layer',
+    getText: x => `${x.PLACEMENT}-${x.YR_INSTALLED}`,
+    getPosition: x => x.COORDINATES,
+    getColor: x => [153, 0, 0],
+    getSize: x => 32,
+    getAngle: x => 0,
+    sizeScale: 1,
+    getTextAnchor: x => 'start',
+    getAlignmentBaseline: x => 'center',
+    getPixelOffset: x => [10, 0],
+    fontTexture: 'http://localhost:8000/ibm2.png',
+    fontInfo: 'http://localhost:8000/ibm2.json'
+  }
+};
+
 const TextLayer100KExample = {
   layer: TextLayer,
   getData: dataSamples.getPoints100K,
@@ -196,6 +216,7 @@ export default {
     'PathMarkerLayer (Meter)': PathMarkerExampleMeter,
     'New SolidPolygonLayer': SolidPolygonLayerExample,
     TextLayer: TextLayerExample,
+    AdvancedTextLayer: AdvancedTextLayerExample,
     'TextLayer (100K)': TextLayer100KExample
   }
 };
